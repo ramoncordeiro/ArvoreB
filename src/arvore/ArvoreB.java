@@ -70,16 +70,16 @@ public class ArvoreB<T extends Comparable<T>> {
     /**
      * Retorna todos elementos da arvore em pre-ordem.
      */
-    public String preOrder() {
-        return pre_ordem(raiz);
+    public String preOrdem() {
+        return preOrdem(raiz);
     }
 
     /**
      * Returna todos  elementos da arvore em pos-order.
      * @return 
      */
-    public String postOrder() {
-        return pos_ordem(raiz);
+    public String posOrdem() {
+        return posOrdem(raiz);
     }
 
     /**
@@ -213,23 +213,23 @@ public class ArvoreB<T extends Comparable<T>> {
         return resultado;
     }
 
-    private String pre_ordem(NO no) {
+    private String preOrdem(NO no) {
 
         String resultado = "";
         if (no != null) {
             resultado = resultado + no.informacao.toString() + " ";
-            resultado = resultado + pre_ordem(no.esquerda);
-            resultado = resultado + pre_ordem(no.direita);
+            resultado = resultado + preOrdem(no.esquerda);
+            resultado = resultado + preOrdem(no.direita);
         }
         return resultado;
     }
 
-    private String pos_ordem(NO no) {
+    private String posOrdem(NO no) {
 
         String resultado = "";
         if (no != null) {
-            resultado = resultado + pos_ordem(no.esquerda);
-            resultado = resultado + pos_ordem(no.direita);
+            resultado = resultado + posOrdem(no.esquerda);
+            resultado = resultado + posOrdem(no.direita);
             resultado = resultado + no.informacao.toString() + " "; //converte para string o to_string
         }
         return resultado;

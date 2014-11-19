@@ -57,6 +57,7 @@ public class main {
                 
                }
         
+        arvore.preOrdem();
         } while ((entrada.charAt(0) != 'e'));
    
         
